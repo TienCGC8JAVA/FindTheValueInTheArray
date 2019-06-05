@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
 public class FindTheValueInTheArray {
-    static String[] students = {"Christian", "Michael", "Camila", "Sienna", "Tanya", "Connor", "Zachariah", "Mallory", "Zoe", "Emily"};
+    private static String[] students = {"Christian", "Michael", "Camila", "Sienna", "Tanya", "Connor", "Zachariah", "Mallory", "Zoe", "Emily"};
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a name’s student:");
+        System.out.println("Enter a name's student:");
         String input_name = scanner.nextLine();
-        int count = isExist(input_name);
+        int count = isExist(students, input_name);
         outputName(count, input_name);
     }
 
-    private static int isExist(String input_name) {
+    private static int isExist(String[] students, String input_name) {
         int count = 0;
         for (int i = 0; i < students.length; i++) {
             if (students[i].equals(input_name)) {
